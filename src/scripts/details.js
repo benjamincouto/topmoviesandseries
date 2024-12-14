@@ -1,3 +1,5 @@
+import ExternalServices from "./ExternalServices.mjs";
+
 // Example data (you would get this from your API or main page)
 const movieData = {
     title: "The Best Movie",

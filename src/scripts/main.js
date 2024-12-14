@@ -11,4 +11,14 @@ async function fetchTopMovies() {
   }
 }
 
+async function fetchTopSeries() {
+  try {
+    const topSeries = await externalServices.getTopSeries();
+    console.log("Top Series:", topSeries);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
 fetchTopMovies();
+fetchTopSeries();
