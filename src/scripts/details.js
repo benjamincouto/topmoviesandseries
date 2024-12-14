@@ -1,13 +1,13 @@
 import ExternalServices from "./ExternalServices.mjs";
 
-// Example data (you would get this from your API or main page)
+// Example data
 const movieData = {
     title: "The Best Movie",
     description: "An amazing journey through the lives of extraordinary characters.",
     releaseDate: "2023-12-25",
     rating: "9.2/10",
     genre: "Adventure",
-    poster: "best-movie.jpg" // Replace with actual image URL
+    poster: "best-movie.jpg" // fake image
 };
 
 // Populate the details page

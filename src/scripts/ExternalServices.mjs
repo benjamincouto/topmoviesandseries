@@ -1,4 +1,4 @@
-const baseURL = import.meta.env.VITE_IMDB_API_URL; // The base URL will be set in your environment variables
+const baseURL = import.meta.env.VITE_IMDB_API_URL; // environment variables
 
 async function convertToJson(res) {
   // Convert response to JSON before checking if it"s ok
@@ -12,7 +12,7 @@ async function convertToJson(res) {
 
 export default class ExternalServices {
   constructor() {
-    this.url = baseURL; // This will be the IMDB API endpoint
+    this.url = baseURL; // API endpoint
   }
 
   async getTopMovies() {
