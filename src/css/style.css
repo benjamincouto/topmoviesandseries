@@ -280,6 +280,7 @@ footer {
   .search-container input {
     width: 100%;
     border-radius: 4px;
+    max-width: none;
   }
 
   .search-container button {
@@ -298,6 +299,9 @@ footer {
 
   .card img {
     height: 200px;
+  }
+  #back-button {
+    width: 100%;
   }
 }
 
