@@ -1,5 +1,5 @@
+/* Typography */
 :root {
-  /* Typography */
   --font-body: Arial, Helvetica, sans-serif;
   --font-headline: Arial, "Arial Narrow Bold", sans-serif;
 
@@ -7,8 +7,8 @@
   --primary-color: #fca311; /* Orange */
   --secondary-color: #14213d; /* Deep blue */
   --tertiary-color: #e5e5e5; /* Light gray */
-  --background-color: #000000; /* Black */
-  --highlight-color: #ffffff; /* White */
+  --background-color: #e5e5e5; /* Black */
+  --highlight-color: #14213d; /* White */
 
   /* Sizes */
   --font-base: 16px;
@@ -28,7 +28,7 @@ body {
   font-size: var(--font-base);
   line-height: 1.6;
   background-color: var(--background-color);
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 
 /* Header Styles */
@@ -67,6 +67,7 @@ header nav a:hover {
   background-color: var(--secondary-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .search-container input {
@@ -75,9 +76,16 @@ header nav a:hover {
   padding: 0.75rem;
   font-size: 1rem;
   border: 2px solid var(--primary-color);
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-container input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  transform: scale(1.02);
 }
 
 .search-container button {
@@ -86,7 +94,7 @@ header nav a:hover {
   color: var(--highlight-color);
   background: var(--primary-color);
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -95,6 +103,10 @@ header nav a:hover {
   background: var(--highlight-color);
   color: var(--primary-color);
   transform: scale(1.05);
+}
+
+.search-container button:focus {
+  outline: 2px solid var(--primary-color);
 }
 
 /* Main Content (Index Page) */
@@ -120,31 +132,32 @@ section h2 {
   margin-left: 8rem;
 }
 
-#movie-card-list ul, 
-#series-card-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 600px;
+#movie-card-list, 
+#series-card-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
 }
 
-#movie-card-list ul li, 
-#series-card-list ul li {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    line-height: 1.5;
+#movie-card-list li, 
+#series-card-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#movie-card-list ul li:hover, 
-#series-card-list ul li:hover {
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
+#movie-card-list li:hover, 
+#series-card-list li:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
 }
 
 .card {
@@ -185,7 +198,7 @@ section h2 {
 #details-container {
   padding: 2rem 1rem;
   background-color: var(--secondary-color);
-  color: var(--highlight-color);
+  color: var(--tertiary-color);
   margin: 2rem auto;
   border-radius: 10px;
   max-width: 800px;
